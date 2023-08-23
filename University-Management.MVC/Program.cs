@@ -1,6 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
 using University_Management.Service.Data;
+using University_Management.Services.Application.Interfaces;
+using University_Management.Services.Application.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<UnivesityManagementDbContext>(options =>
     options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IStudendRepository, StudentRepository>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

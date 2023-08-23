@@ -1,0 +1,41 @@
+﻿@model IEnumerable<University_Management.Core.Student>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Students With Teachers</h1>
+
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Teachers
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {   
+            <tr>
+                <td>
+                    @item.FirstName @item.LastName
+                </td>
+                <td>
+                    <select>
+                        @foreach (var course in item.Courses)
+                        {
+                            <option>
+                                @course.Teacher.FirstName @course.Teacher.LastName 
+                            </option>
+                        }
+                    </select>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

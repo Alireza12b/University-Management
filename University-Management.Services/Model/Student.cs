@@ -16,4 +16,5 @@ namespace University_Management.Core
 
         public Address Address { get; set; }
     }
+
 }
