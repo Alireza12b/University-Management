@@ -9,5 +9,6 @@ namespace University_Management.Core
 {
     public class Lesson : BaseEntity
     {
+        public string Name { get; set; }
     }
 }

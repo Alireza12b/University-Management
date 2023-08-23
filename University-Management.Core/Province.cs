@@ -9,6 +9,6 @@ namespace University_Management.Core
 {
     public class Province : BaseEntity
     {
-
+        
     }
 }
