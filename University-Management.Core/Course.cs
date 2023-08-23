@@ -7,8 +7,13 @@ using University_Management.Core.Common;
 
 namespace University_Management.Core
 {
-    public class Lesson : BaseEntity
+    public class Course : BaseEntity
     {
         public string Name { get; set; }
+
+        public int TeacherId { get; set; }
+        public Teacher Teacher { get; set;}
+
+        public ICollection<StudentCourse> StudentCourses { get; set; }
     }
 }

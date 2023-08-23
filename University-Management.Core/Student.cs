@@ -11,5 +11,7 @@ namespace University_Management.Core
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public ICollection<StudentCourse> StudentCourses { get; set; }
     }
 }

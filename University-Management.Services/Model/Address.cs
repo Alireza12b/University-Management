@@ -16,5 +16,8 @@ namespace University_Management.Core
 
         public int ProvinceId { get; set; }
         public Province Province { get; set; }
+
+        public int AddressOfStudentId { get; set; }
+        public Student Student { get; set; }
     }
 }

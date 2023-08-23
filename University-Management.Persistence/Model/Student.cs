@@ -7,11 +7,13 @@ using University_Management.Core.Common;
 
 namespace University_Management.Core
 {
-    public class Teacher : BaseEntity
+    public class Student : BaseEntity
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public ICollection<Course> Courses { get; set; }
+        public ICollection<StudentCourse> StudentCourses { get; set; }
+
+        public Address Address { get; set; }
     }
 }
